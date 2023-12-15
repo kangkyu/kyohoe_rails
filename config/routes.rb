@@ -3,6 +3,12 @@ Rails.application.routes.draw do
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :postings, only: [:new, :create, :show]
+  namespace :api do
+    namespace :v1 do
+      resources :postings, only: [:show]
+    end
+  end
+
   resources :users
   resource :user_session, only: [:new, :create, :destroy]
 

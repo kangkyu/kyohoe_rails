@@ -1,0 +1,7 @@
+<h1><%= @posting.title %></h1>
+
+<p><strong>Content:</strong></p>
+<p><%= @posting.body %></p>
+
+<p><strong>URL:</strong></p>
+<p><%= link_to @posting.video_url, @posting.video_url, target: '_blank' %></p>

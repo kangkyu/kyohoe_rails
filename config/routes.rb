@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  use_doorkeeper
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :postings, only: [:new, :create, :show]
   resources :users
